@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+
+html {
+ padding: 0px;   
+ margin: 0px;
+ height: 100%;
+ width: 100%;
+ background: url('/assets/images/wave-haikei.svg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -o-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ position: relative;
+ overflow: hidden;
+}
+
+//SNOWFLAKES AND SNOWFALL ANIMATION
+.snowflake {
+    --size: 1vw;
+    width: var(--size);
+    height: var(--size);
+    background: #f8f8f2;
+    border-radius: 50%;
+    position: absolute;
+    top: -5vh;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translate3d(var(--left-ini), 0, 0);
+    }
+    100% {
+        transform: translate3d(var(--left-end), 110vh, 0);
+    }
+}
+
+@for $i from 1 through 20 {
+    .snowflake:nth-child(#{$i}) {
+        --size: #{random(7) * 0.2}vw;
+        --left-ini: #{random(20) - 10}vw;
+        --left-end: #{random(20) - 10}vw;
+        left: #{random(100)}vw;
+        animation: snowfall #{5 + random(10)}s linear infinite;
+        animation-delay: -#{random(10)}s;
+    }
+}
