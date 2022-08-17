@@ -1,21 +1,50 @@
-h1 {
+h2 {
     color: #f8f8f2;
-    font-size: 2.75rem;
+    font-size: 2.75vw;
     font-family: 'Dosis';
+    white-space: nowrap;
 }
 
 strong {
     color: #8be9fd;
-    font-size: 3.25rem;
+    font-size: 3.5vw;
     font-weight: 800;
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
+
+//desktop
+@media (max-width: 1200px) {
+    h2{
+        font-size: 3vw;
+    }
+    strong {
+        font-size: 4vw;
+    }
+}
+//laptop
+@media (max-width: 1024px) {
+    h2{
+        font-size: 4vw;
+    }
+    strong {
+        font-size: 5vw;
+    }
+}
+//iPad + mobile
+@media (max-width: 768px) {
+    h2{
+        font-size: 4.5vw;
+    }
+    strong {
+        font-size: 5.5vw;
+    }
+}
+
+
+

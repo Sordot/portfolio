@@ -4,14 +4,14 @@
     width: 50%;
     justify-content: space-evenly;
     position: absolute;
-    bottom: 2%;
+    bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 a {
     color: #f8f8f2;
-    font-size: 1.75rem;
+    font-size: 2vw;
     font-family: 'Dosis';
     text-decoration: none;
 }
@@ -22,4 +22,29 @@ a:hover {
 
 li {
     list-style: none;
+}
+
+//desktop
+@media (max-width: 1200px) {
+    a {
+        font-size: 3.5vw;
+    }
+}
+//laptop, keeps iPad on desktop layout (iPad width is 768px)
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    a {
+        margin-bottom: 1.5vw;
+        font-size: 5vw;
+    }
+}
+//mobile
+@media (max-width: 500px) {
+    a {
+        font-size: 5vw;
+    }
 }
