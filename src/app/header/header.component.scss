@@ -3,7 +3,7 @@
     flex-direction: row;
     width: 50%;
     justify-content: space-evenly;
-    position: absolute;
+    position: fixed;
     bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -38,7 +38,7 @@ li {
         justify-content: center;
     }
     a {
-        margin-bottom: 1.5vw;
+        padding-top: 1.5vw;
         font-size: 5vw;
     }
 }
